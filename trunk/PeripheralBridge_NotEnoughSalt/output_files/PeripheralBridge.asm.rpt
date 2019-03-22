@@ -1,0 +1,91 @@
+Assembler report for PeripheralBridge
+Tue May 01 16:29:49 2018
+Quartus Prime Version 17.0.2 Build 602 07/19/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Assembler Summary
+  3. Assembler Settings
+  4. Assembler Generated Files
+  5. Assembler Device Options: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/output_files/PeripheralBridge.pof
+  6. Assembler Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; Assembler Summary                                             ;
++-----------------------+---------------------------------------+
+; Assembler Status      ; Successful - Tue May 01 16:29:49 2018 ;
+; Revision Name         ; PeripheralBridge                      ;
+; Top-level Entity Name ; PeripheralBridge                      ;
+; Family                ; MAX II                                ;
+; Device                ; EPM570T144C5                          ;
++-----------------------+---------------------------------------+
+
+
++----------------------------------+
+; Assembler Settings               ;
++--------+---------+---------------+
+; Option ; Setting ; Default Value ;
++--------+---------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                    ;
++--------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                    ;
++--------------------------------------------------------------------------------------------------------------+
+; F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/output_files/PeripheralBridge.pof ;
++--------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/output_files/PeripheralBridge.pof ;
++----------------+-----------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                               ;
++----------------+-----------------------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x002CF8B1                                                                                                            ;
+; Checksum       ; 0x002CF8E7                                                                                                            ;
++----------------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------+
+; Assembler Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Assembler
+    Info: Version 17.0.2 Build 602 07/19/2017 SJ Standard Edition
+    Info: Processing started: Tue May 01 16:29:48 2018
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off PeripheralBridge -c PeripheralBridge
+Info (115031): Writing out detailed assembly data for power analysis
+Info (115030): Assembler is generating device programming files
+Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 522 megabytes
+    Info: Processing ended: Tue May 01 16:29:49 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

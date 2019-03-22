@@ -1,0 +1,69 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'NE'
+Slack : -2.195
+TNS   : -37.442
+
+Type  : Slow Model Setup 'SysClk'
+Slack : 4.670
+TNS   : 0.000
+
+Type  : Slow Model Hold 'NE'
+Slack : 0.603
+TNS   : 0.000
+
+Type  : Slow Model Hold 'SysClk'
+Slack : 1.640
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'NE'
+Slack : 1.130
+TNS   : 0.000
+
+Type  : Slow Model Removal 'NE'
+Slack : 4.213
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'NE'
+Slack : 4.734
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'SysClk'
+Slack : 4.734
+TNS   : 0.000
+
+Type  : Fast Model Setup 'NE'
+Slack : 1.506
+TNS   : 0.000
+
+Type  : Fast Model Setup 'SysClk'
+Slack : 8.128
+TNS   : 0.000
+
+Type  : Fast Model Hold 'NE'
+Slack : 0.360
+TNS   : 0.000
+
+Type  : Fast Model Hold 'SysClk'
+Slack : 0.360
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'NE'
+Slack : 6.924
+TNS   : 0.000
+
+Type  : Fast Model Removal 'NE'
+Slack : 1.005
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'NE'
+Slack : 4.907
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'SysClk'
+Slack : 4.907
+TNS   : 0.000
+
+------------------------------------------------------------

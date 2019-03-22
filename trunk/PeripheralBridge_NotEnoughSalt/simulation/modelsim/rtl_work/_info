@@ -1,0 +1,226 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/simulation/modelsim
+Eedgedetector
+Z1 w1495359284
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/EdgeDetector.vhd
+Z5 FF:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/EdgeDetector.vhd
+l0
+L4
+VM;SFJeZ3ALfkFPgLD`nPY2
+!s100 UjTf59IMWNj3aR87W2FUX3
+Z6 OV;C;10.4d;61
+31
+Z7 !s110 1495733890
+!i10b 1
+Z8 !s108 1495733890.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/EdgeDetector.vhd|
+Z10 !s107 F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/EdgeDetector.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1
+Abehavioral
+R2
+R3
+DEx4 work 12 edgedetector 0 22 M;SFJeZ3ALfkFPgLD`nPY2
+l13
+L11
+VNH]?8WCLLSV=5Xcd<FK@G1
+!s100 4B4>ZZN4IX^UiFKdPcV<]3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Efreqdivider
+Z13 w1495644588
+R2
+R3
+R0
+Z14 8F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/FreqDivider.vhd
+Z15 FF:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/FreqDivider.vhd
+l0
+L4
+V3Y=:d[:]KkTR>b@1n1NAc2
+!s100 1:olHY0NFB[h_@dnR:HcZ3
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/FreqDivider.vhd|
+Z17 !s107 F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/FreqDivider.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 11 freqdivider 0 22 3Y=:d[:]KkTR>b@1n1NAc2
+l26
+L15
+V^9l7`H5EJhcFAO?nl5Hkl3
+!s100 8;2OFoW9elKI0POUMgz5b0
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Efsmccontroller
+Z18 w1495252250
+R2
+R3
+R0
+Z19 8F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/FSMCController.vhd
+Z20 FF:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/FSMCController.vhd
+l0
+L4
+V;aDfEzU2WL]49<L9PVioL0
+!s100 [:a6Oo73d?MoH2CEJUGf@0
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/FSMCController.vhd|
+Z22 !s107 F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/FSMCController.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 14 fsmccontroller 0 22 ;aDfEzU2WL]49<L9PVioL0
+l24
+L20
+VU`^iVeEdEGQMEdB>33V8e3
+!s100 4hadcgJ3h`DVF>5da_2Lj2
+R6
+31
+R7
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R11
+R12
+Eparportcontroller
+Z23 w1495631542
+R2
+R3
+R0
+Z24 8F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/ParPortController.vhd
+Z25 FF:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/ParPortController.vhd
+l0
+L4
+VTc]jFL168`@>fNUOWKkP53
+!s100 H5I^0F@jLL^1RI^2R7a<z3
+R6
+31
+R7
+!i10b 1
+R8
+Z26 !s90 -reportprogress|300|-93|-work|work|F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/ParPortController.vhd|
+Z27 !s107 F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/ParPortController.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 17 parportcontroller 0 22 Tc]jFL168`@>fNUOWKkP53
+l21
+L17
+V1f9zRS7JMl40:S=jY@@353
+!s100 _Xg^b?0zkj=6RLB10SYS73
+R6
+31
+R7
+!i10b 1
+R8
+R26
+R27
+!i113 1
+R11
+R12
+Pperipbirdgetypes
+R2
+R3
+w1495360952
+R0
+8F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PeripBridgeTypes.vhd
+FF:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PeripBridgeTypes.vhd
+l0
+L4
+VZYDjTneMBKTCG1imki8gI3
+!s100 cXH[WYi^>PzO9NzE82[8z1
+R6
+31
+R7
+!i10b 1
+R8
+!s90 -reportprogress|300|-93|-work|work|F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PeripBridgeTypes.vhd|
+!s107 F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PeripBridgeTypes.vhd|
+!i113 1
+R11
+R12
+Eportcontroller
+Z28 w1495643333
+R2
+R3
+R0
+Z29 8F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PortController.vhd
+Z30 FF:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PortController.vhd
+l0
+L4
+Vf0^OboX;f2Y9mYe]9=99j0
+!s100 alVA4AG1]86e=e<I;g[RN2
+R6
+31
+Z31 !s110 1495733889
+!i10b 1
+Z32 !s108 1495733889.000000
+Z33 !s90 -reportprogress|300|-93|-work|work|F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PortController.vhd|
+Z34 !s107 F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PortController.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 14 portcontroller 0 22 f0^OboX;f2Y9mYe]9=99j0
+l28
+L19
+V[Z88iOe50aUGCV?3O?H4n2
+!s100 @GYaa5og`^YYJdZnJW]Va0
+R6
+31
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R11
+R12

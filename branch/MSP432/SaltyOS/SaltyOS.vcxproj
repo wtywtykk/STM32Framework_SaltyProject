@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|VisualGDB">
+      <Configuration>Debug</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|VisualGDB">
+      <Configuration>Release</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{D31F2F61-74D0-4840-B79A-FE3A8123FBB5}</ProjectGuid>
+    <BSP_ID>com.sysprogs.arm.ti.msp432</BSP_ID>
+    <BSP_VERSION>1.0</BSP_VERSION>
+    <InPlaceBSPSubdir />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <MCUPropertyListFile>$(ProjectDir)msp432.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <MCUPropertyListFile>$(ProjectDir)msp432.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <GNUConfigurationType>Debug</GNUConfigurationType>
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>7.2.0/8.0.1/r3</ToolchainVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>7.2.0/8.0.1/r3</ToolchainVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ClCompile>
+      <DumpStackUsage>true</DumpStackUsage>
+      <WarningLevel>All</WarningLevel>
+      <AdditionalIncludeDirectories>.;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG=1;RELEASE=1;gcc=1;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <ProduceRelocationRecords>true</ProduceRelocationRecords>
+      <AdditionalLinkerInputs>libarm_cortexM4lf_math.a;%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <LibrarySearchDirectories>;%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>;%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <LinkerScript />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <ClCompile>
+      <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+      <WarningLevel>None</WarningLevel>
+      <AdditionalIncludeDirectories>.;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG=1;gcc=1;DEBUG_DEFAULT_INTERRUPT_HANDLERS=1;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLinkerInputs>libarm_cortexM4lf_math.a;%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <LibrarySearchDirectories>;%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>;%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <LinkerScript />
+    </Link>
+    <ToolchainSettingsContainer>
+      <InstructionSet>THUMB</InstructionSet>
+    </ToolchainSettingsContainer>
+    <ToolchainSettingsContainer>
+      <FloatABI>hard</FloatABI>
+    </ToolchainSettingsContainer>
+    <ToolchainSettingsContainer>
+      <ARMCPU>cortex-m4</ARMCPU>
+    </ToolchainSettingsContainer>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <EmbeddedBinaryFile Include="Resource\Pack.bin" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="Algorithm\Transform\DFT\DFT.cpp" />
+    <ClCompile Include="Algorithm\Transform\FFT\CFFT\CFFT_Radix2.cpp" />
+    <ClCompile Include="Algorithm\Transform\FFT\CFFT\CFFT_Radix2_MemCached.cpp" />
+    <ClCompile Include="Algorithm\Transform\FFT\FFT.cpp" />
+    <ClCompile Include="Algorithm\Transform\FFT\RFFT\RFFT.cpp" />
+    <ClCompile Include="Algorithm\Transform\TwiddleTable.cpp" />
+    <ClCompile Include="Algorithm\WindowFunction\WindowFunctionDef.cpp" />
+    <ClCompile Include="Driver\ADS1274.c" />
+    <ClCompile Include="Driver\ASC16.cpp" />
+    <ClCompile Include="Driver\FT5336.c" />
+    <ClCompile Include="Driver\ILI9806G.c" />
+    <ClCompile Include="Driver\LowLevelGraphic.c" />
+    <ClCompile Include="Driver\TLV5617.c" />
+    <ClCompile Include="HAL\Clock.c" />
+    <ClCompile Include="HAL\GPIO_32.c" />
+    <ClCompile Include="HAL\SoftSPI.c" />
+    <ClCompile Include="HAL\PowerManagement.c" />
+    <ClCompile Include="HAL\Tick.c" />
+    <ClCompile Include="Kernel\Common\BugCheck.c" />
+    <ClCompile Include="Kernel\Common\Init.cpp" />
+    <ClCompile Include="Kernel\Common\KObject.cpp" />
+    <ClCompile Include="Kernel\GUI\DC\BinderDC.cpp" />
+    <ClCompile Include="Kernel\GUI\DC\ClippedDC.cpp" />
+    <ClCompile Include="Kernel\GUI\DC\DC.cpp" />
+    <ClCompile Include="Kernel\GUI\DC\LCDDC.cpp" />
+    <ClCompile Include="Kernel\GUI\Misc\RECT.cpp" />
+    <ClCompile Include="Kernel\GUI\Picture\DirectDataPic.cpp" />
+    <ClCompile Include="Kernel\GUI\Picture\IndirectDataPic.cpp" />
+    <ClCompile Include="Kernel\GUI\Picture\Picture.cpp" />
+    <ClCompile Include="Kernel\GUI\Shape\Circle.cpp" />
+    <ClCompile Include="Kernel\GUI\Shape\Eclipse.cpp" />
+    <ClCompile Include="Kernel\GUI\Shape\Line.cpp" />
+    <ClCompile Include="Kernel\GUI\Text\DrawString.cpp" />
+    <ClCompile Include="Kernel\GUI\Text\EstimateString.cpp" />
+    <ClCompile Include="Kernel\GUI\Text\FontAddressing.cpp" />
+    <ClCompile Include="Kernel\GUI\Text\FontGroup.cpp" />
+    <ClCompile Include="Kernel\GUI\Text\FontProvider.cpp" />
+    <ClCompile Include="Kernel\MemMan\MemMan.c" />
+    <ClCompile Include="Kernel\MemMan\Pool.c" />
+    <ClCompile Include="Kernel\MemMan\stdmem.c" />
+    <ClCompile Include="Kernel\Power\Power.cpp" />
+    <ClCompile Include="MultiInstDriver\DAC8311.c" />
+    <ClCompile Include="MultiInstDriver\LTC1446.c" />
+    <ClCompile Include="MultiInstDriver\PGA11x.c" />
+    <ClCompile Include="SaltyOS.cpp" />
+    <ClCompile Include="Test\CircleTest.cpp" />
+    <ClCompile Include="Test\ClippedDCTest.cpp" />
+    <ClCompile Include="Test\EclipseTest.cpp" />
+    <ClCompile Include="Test\FT5336Test.cpp" />
+    <ClCompile Include="Test\LineTest.cpp" />
+    <ClCompile Include="Test\LTC1446Test.cpp" />
+    <ClCompile Include="Test\MemTest.cpp" />
+    <ClCompile Include="Test\PicTest.cpp" />
+    <ClCompile Include="Test\FFTTest.cpp" />
+    <ClCompile Include="Test\RFFTTest.cpp" />
+    <ClCompile Include="Test\Tests.cpp" />
+    <ClCompile Include="Test\TextTest.cpp" />
+    <ClCompile Include="Test\WaveTest.cpp" />
+    <ClCompile Include="User\AutoRange.cpp" />
+    <ClCompile Include="User\BoardIO.cpp" />
+    <ClCompile Include="User\CurMeas.cpp" />
+    <ClCompile Include="User\Key.cpp" />
+    <ClCompile Include="User\Process.cpp" />
+    <ClCompile Include="User\Sample.cpp" />
+    <ClInclude Include="Driver\ADS1274.h" />
+    <ClInclude Include="User\AutoRange.h" />
+    <ClInclude Include="User\BoardIO.h" />
+    <ClInclude Include="User\CurMeas.h" />
+    <ClInclude Include="User\Key.h" />
+    <ClInclude Include="User\Process.h" />
+    <ClInclude Include="User\Sample.h" />
+    <ClInclude Include="User\Window.h" />
+    <None Include="msp432.props" />
+    <ClCompile Include="$(BSP_ROOT)\SystemInit\SystemInit.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\adc14.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\aes256.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\comp_e.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\cpu.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\crc32.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\cs.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\dma.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\flash.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\fpu.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\gpio.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\i2c.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\interrupt.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\mpu.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\pcm.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\pmap.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\pss.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\ref_a.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\reset.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\rtc_c.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\spi.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\sysctl.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\systick.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\timer32.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\timer_a.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\uart.c" />
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\wdt_a.c" />
+    <ClCompile Include="$(BSP_ROOT)\MSP432P4xx\StartupFiles\MSP432_startup_gcc.c" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\msp.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\msp432.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\msp432p401r.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\msp_compatibility.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\CMSIS\cmsis_ccs.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\CMSIS\core_cm4.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\CMSIS\core_cm4_simd.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\CMSIS\core_cmFunc.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\CMSIS\core_cmInstr.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\adc14.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\aes256.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\comp_e.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\cpu.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\crc32.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\cs.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\debug.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\dma.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\driverlib.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\eusci.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\flash.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\fpu.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\gpio.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\i2c.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\interrupt.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\mpu.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\pcm.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\pmap.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\pss.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\ref_a.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\reset.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\rom.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\rom_map.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\rtc_c.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\spi.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\sysctl.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\systick.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\timer32.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\timer_a.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\uart.h" />
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\wdt_a.h" />
+    <None Include="SaltyOS-Debug.vgdbsettings" />
+    <None Include="SaltyOS-Release.vgdbsettings" />
+    <None Include="msp432.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Algorithm\AlgorithmTypes.h" />
+    <ClInclude Include="Algorithm\MemCached\MemCached.h" />
+    <ClInclude Include="Algorithm\Transform\DFT\DFT.h" />
+    <ClInclude Include="Algorithm\Transform\FFT\CFFT\CFFT_Radix2.h" />
+    <ClInclude Include="Algorithm\Transform\FFT\CFFT\CFFT_Radix2_MemCached.h" />
+    <ClInclude Include="Algorithm\Transform\FFT\FFT.h" />
+    <ClInclude Include="Algorithm\Transform\FFT\RFFT\RFFT.h" />
+    <ClInclude Include="Algorithm\Transform\TwiddleTable.h" />
+    <ClInclude Include="Algorithm\WindowFunction\WindowFunction.h" />
+    <ClInclude Include="CommonTypes.h" />
+    <ClInclude Include="Driver\ASC16.h" />
+    <ClInclude Include="Driver\FT5336.h" />
+    <ClInclude Include="Driver\FT5336_Reg.h" />
+    <ClInclude Include="Driver\ILI9806G.h" />
+    <ClInclude Include="Driver\LowLevelGraphic.h" />
+    <ClInclude Include="Driver\TLV5617.h" />
+    <ClInclude Include="HAL\Clock.h" />
+    <ClInclude Include="HAL\GPIO_32.h" />
+    <ClInclude Include="HAL\SoftSPI.h" />
+    <ClInclude Include="HAL\Tick.h" />
+    <ClInclude Include="HAL\UniGPIO.h" />
+    <ClInclude Include="HAL\Hardware.h" />
+    <ClInclude Include="HAL\HCommon.h" />
+    <ClInclude Include="HAL\PowerManagement.h" />
+    <ClInclude Include="HAL\UniSPI.h" />
+    <ClInclude Include="Kernel\Common\BugCheck.h" />
+    <ClInclude Include="Kernel\Common\Init.h" />
+    <ClInclude Include="Kernel\Common\KCommon.h" />
+    <ClInclude Include="Kernel\Common\KObject.h" />
+    <ClInclude Include="Kernel\GUI\DC\BinderDC.h" />
+    <ClInclude Include="Kernel\GUI\DC\ClippedDC.h" />
+    <ClInclude Include="Kernel\GUI\DC\DC.h" />
+    <ClInclude Include="Kernel\GUI\DC\LCDDC.h" />
+    <ClInclude Include="Kernel\GUI\GUICommon.h" />
+    <ClInclude Include="Kernel\GUI\Misc\RECT.h" />
+    <ClInclude Include="Kernel\GUI\Picture\DirectDataPic.h" />
+    <ClInclude Include="Kernel\GUI\Picture\IndirectDataPic.h" />
+    <ClInclude Include="Kernel\GUI\Picture\Picture.h" />
+    <ClInclude Include="Kernel\GUI\Shape\Circle.h" />
+    <ClInclude Include="Kernel\GUI\Shape\Eclipse.h" />
+    <ClInclude Include="Kernel\GUI\Shape\Line.h" />
+    <ClInclude Include="Kernel\GUI\Text\DrawString.h" />
+    <ClInclude Include="Kernel\GUI\Text\EstimateString.h" />
+    <ClInclude Include="Kernel\GUI\Text\FontAddressing.h" />
+    <ClInclude Include="Kernel\GUI\Text\FontGroup.h" />
+    <ClInclude Include="Kernel\GUI\Text\FontProvider.h" />
+    <ClInclude Include="Kernel\MemMan\MemMan.h" />
+    <ClInclude Include="Kernel\MemMan\Pool.h" />
+    <ClInclude Include="Kernel\Power\Power.h" />
+    <ClInclude Include="MultiInstDriver\DAC8311.h" />
+    <ClInclude Include="MultiInstDriver\LTC1446.h" />
+    <ClInclude Include="MultiInstDriver\PGA11x.h" />
+    <ClInclude Include="Test\Tests.h" />
+  </ItemGroup>
+</Project>

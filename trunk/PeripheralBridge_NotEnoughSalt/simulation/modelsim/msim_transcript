@@ -1,0 +1,96 @@
+# Reading D:/altera_lite/16.0/modelsim_ase/tcl/vsim/pref.tcl
+# do PeripheralBridge_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Copying D:/altera_lite/16.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PortController.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 01:38:09 on May 26,2017
+# vcom -reportprogress 300 -93 -work work F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PortController.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PortController
+# -- Compiling architecture Behavioral of PortController
+# End time: 01:38:09 on May 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/FSMCController.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 01:38:10 on May 26,2017
+# vcom -reportprogress 300 -93 -work work F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/FSMCController.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FSMCController
+# -- Compiling architecture Behavioral of FSMCController
+# End time: 01:38:10 on May 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/EdgeDetector.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 01:38:10 on May 26,2017
+# vcom -reportprogress 300 -93 -work work F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/EdgeDetector.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity EdgeDetector
+# -- Compiling architecture Behavioral of EdgeDetector
+# End time: 01:38:10 on May 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/FreqDivider.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 01:38:10 on May 26,2017
+# vcom -reportprogress 300 -93 -work work F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/FreqDivider.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FreqDivider
+# -- Compiling architecture Behavioral of FreqDivider
+# End time: 01:38:10 on May 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PeripBridgeTypes.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 01:38:10 on May 26,2017
+# vcom -reportprogress 300 -93 -work work F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PeripBridgeTypes.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package PeripBirdgeTypes
+# End time: 01:38:10 on May 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/ParPortController.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 01:38:10 on May 26,2017
+# vcom -reportprogress 300 -93 -work work F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/ParPortController.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ParPortController
+# -- Compiling architecture Behavioral of ParPortController
+# End time: 01:38:10 on May 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PeripheralBridge.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 01:38:10 on May 26,2017
+# vcom -reportprogress 300 -93 -work work F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PeripheralBridge.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# ** Error: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PeripheralBridge.vhd(5): Library peripbirdgetypes not found.
+# -- Loading package PeripBirdgeTypes
+# ** Error: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PeripheralBridge.vhd(8): VHDL Compiler exiting
+# End time: 01:38:10 on May 26,2017, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: D:/altera_lite/16.0/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./PeripheralBridge_run_msim_rtl_vhdl.do line 14
+# D:/altera_lite/16.0/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/PeripheralBridge.vhd}"

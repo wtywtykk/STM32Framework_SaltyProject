@@ -1,0 +1,80 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt/simulation/modelsim
+Eperipheralbridge
+Z1 w1495732495
+Z2 DPx4 work 26 peripheralbridge_data_type 0 22 KT8KQA40a2a:zNJYVoXWn1
+Z3 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z4 DPx5 maxii 15 maxii_atom_pack 0 22 e8FOS8[e<aGhTI9R_8oFd3
+Z5 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z6 DPx5 maxii 16 maxii_components 0 22 4i:mP0EH99i7XJ5dljaSC1
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z9 8PeripheralBridge.vho
+Z10 FPeripheralBridge.vho
+l0
+L48
+VSjEb0RA:A0@m:W>JiDdIo0
+!s100 ]A>5cg0zTVQU<bFl4e:^62
+Z11 OV;C;10.4d;61
+31
+Z12 !s110 1495732506
+!i10b 1
+Z13 !s108 1495732506.000000
+Z14 !s90 -reportprogress|300|-93|-work|work|PeripheralBridge.vho|
+Z15 !s107 PeripheralBridge.vho|
+!i113 1
+Z16 o-93 -work work
+Z17 tExplicit 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 16 peripheralbridge 0 22 SjEb0RA:A0@m:W>JiDdIo0
+l549
+L66
+V]7_0kGlga^jE<9kD<MAJf3
+!s100 ;^QRa1PAAaO?mFjonCBIC0
+R11
+31
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Pperipheralbridge_data_type
+R7
+R8
+R1
+R0
+R9
+R10
+l0
+L33
+VKT8KQA40a2a:zNJYVoXWn1
+!s100 <Un@D:4L?Zk>A2IH1<@f_0
+R11
+31
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17

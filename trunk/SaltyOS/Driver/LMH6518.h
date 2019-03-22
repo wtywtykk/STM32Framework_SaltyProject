@@ -1,0 +1,7 @@
+#pragma once
+
+C_HEADER_BEGIN
+
+STATUS LMH6518_Init(void);
+
+C_HEADER_END

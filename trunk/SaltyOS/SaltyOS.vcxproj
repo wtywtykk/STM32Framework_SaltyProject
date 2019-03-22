@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|VisualGDB">
+      <Configuration>Debug</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|VisualGDB">
+      <Configuration>Release</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{59419B41-692D-4DDF-9165-E00702C4BF61}</ProjectGuid>
+    <BSP_ID>com.sysprogs.arm.stm32</BSP_ID>
+    <BSP_VERSION>4.7</BSP_VERSION>
+    <InPlaceBSPSubdir />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <MCUPropertyListFile>$(ProjectDir)stm32.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <MCUPropertyListFile>$(ProjectDir)stm32.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <GNUConfigurationType>Debug</GNUConfigurationType>
+    <Toolchain>C:\SysGCC\arm-eabi</Toolchain>
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>7.2.0/8.0.1/r3</ToolchainVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <Toolchain>C:\SysGCC\arm-eabi</Toolchain>
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>7.2.0/8.0.1/r3</ToolchainVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ClCompile>
+      <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+      <DumpStackUsage>true</DumpStackUsage>
+      <WarningLevel>All</WarningLevel>
+      <AdditionalIncludeDirectories>;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG=1;RELEASE=1;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <ProduceRelocationRecords>true</ProduceRelocationRecords>
+      <AdditionalLinkerInputs>libarm_cortexM4lf_math.a;%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <LibrarySearchDirectories>;%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>;%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <LinkerScript />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <ClCompile>
+      <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+      <WarningLevel>All</WarningLevel>
+      <AdditionalIncludeDirectories>;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG=1;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLinkerInputs>libarm_cortexM4lf_math.a;%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <LibrarySearchDirectories>;%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>;%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <LinkerScript />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Algorithm\SincInterpolation.cpp" />
+    <ClCompile Include="Algorithm\Transform\DFT\DFT.cpp" />
+    <ClCompile Include="Algorithm\Transform\FFT\CFFT\CFFT_Radix2.cpp" />
+    <ClCompile Include="Algorithm\Transform\FFT\CFFT\CFFT_Radix2_MemCached.cpp" />
+    <ClCompile Include="Algorithm\Transform\FFT\FFT.cpp" />
+    <ClCompile Include="Algorithm\Transform\FFT\RFFT\RFFT.cpp" />
+    <ClCompile Include="Algorithm\Transform\TwiddleTable.cpp" />
+    <ClCompile Include="Algorithm\WindowFunction\WindowFunctionDef.cpp" />
+    <ClCompile Include="Driver\AD7606.c" />
+    <ClCompile Include="Driver\AD7671.c" />
+    <ClCompile Include="Driver\AD9959.c" />
+    <ClCompile Include="Driver\ADS8363.c" />
+    <ClCompile Include="Driver\ASC16.cpp" />
+    <ClCompile Include="Driver\FT5336.c" />
+    <ClCompile Include="Driver\ILI9806G.c" />
+    <ClCompile Include="Driver\LMH6518.c" />
+    <ClCompile Include="Driver\LOBoard.c" />
+    <ClCompile Include="Driver\LowLevelGraphic.c" />
+    <ClCompile Include="Driver\SAFrontEnd.c" />
+    <ClCompile Include="Driver\SRAM.c" />
+    <ClCompile Include="Driver\SST39VFxxxx.c" />
+    <ClCompile Include="Driver\TLV5617.c" />
+    <ClCompile Include="Driver\W25Qxx.c" />
+    <ClCompile Include="Driver\KeyBoard.c" />
+    <ClCompile Include="HAL\Beep.c" />
+    <ClCompile Include="HAL\BoardReset.c" />
+    <ClCompile Include="HAL\Clock.c" />
+    <ClCompile Include="HAL\DMA.c" />
+    <ClCompile Include="HAL\FPGASPIPort.c" />
+    <ClCompile Include="HAL\GPIO_32.c" />
+    <ClCompile Include="HAL\GPIO_CPLD.c" />
+    <ClCompile Include="HAL\SoftSPI.c" />
+    <ClCompile Include="HAL\EXTIDispath.c" />
+    <ClCompile Include="HAL\FSMC.c" />
+    <ClCompile Include="HAL\FPGAParPort.c" />
+    <ClCompile Include="HAL\Interrupt.c" />
+    <ClCompile Include="HAL\HardSPI.c" />
+    <ClCompile Include="HAL\PeripheralBus.c" />
+    <ClCompile Include="HAL\PowerManagement.c" />
+    <ClCompile Include="HAL\StandardSPIPort.c" />
+    <ClCompile Include="HAL\stm32f4xx_it.c" />
+    <ClCompile Include="HAL\system_stm32f4xx.c" />
+    <ClCompile Include="HAL\UART.c" />
+    <ClCompile Include="HAL\USB.c" />
+    <ClCompile Include="HAL\usbd_cdc_if.c" />
+    <ClCompile Include="HAL\usbd_conf.c" />
+    <ClCompile Include="HAL\usbd_desc.c" />
+    <ClCompile Include="Kernel\Common\BugCheck.c" />
+    <ClCompile Include="Kernel\Common\Init.cpp" />
+    <ClCompile Include="Kernel\Common\KObject.cpp" />
+    <ClCompile Include="Kernel\FlashFS\FlashFS.cpp" />
+    <ClCompile Include="Kernel\GUI\Cursor\Cursor.cpp" />
+    <ClCompile Include="Kernel\GUI\DC\BinderDC.cpp" />
+    <ClCompile Include="Kernel\GUI\DC\ClippedDC.cpp" />
+    <ClCompile Include="Kernel\GUI\DC\DC.cpp" />
+    <ClCompile Include="Kernel\GUI\DC\LCDDC.cpp" />
+    <ClCompile Include="Kernel\GUI\InputBox\InputBox.cpp" />
+    <ClCompile Include="Kernel\GUI\Menu\GlobalMenu.cpp" />
+    <ClCompile Include="Kernel\GUI\Menu\Menu.cpp" />
+    <ClCompile Include="Kernel\GUI\Menu\MenuItem.cpp" />
+    <ClCompile Include="Kernel\GUI\Misc\RECT.cpp" />
+    <ClCompile Include="Kernel\GUI\Picture\DirectDataPic.cpp" />
+    <ClCompile Include="Kernel\GUI\Picture\FlashFSPic.cpp" />
+    <ClCompile Include="Kernel\GUI\Picture\IndirectDataPic.cpp" />
+    <ClCompile Include="Kernel\GUI\Picture\Picture.cpp" />
+    <ClCompile Include="Kernel\GUI\Shape\Circle.cpp" />
+    <ClCompile Include="Kernel\GUI\Shape\Eclipse.cpp" />
+    <ClCompile Include="Kernel\GUI\Shape\Line.cpp" />
+    <ClCompile Include="Kernel\GUI\Text\DrawString.cpp" />
+    <ClCompile Include="Kernel\GUI\Text\EstimateString.cpp" />
+    <ClCompile Include="Kernel\GUI\Text\FontAddressing.cpp" />
+    <ClCompile Include="Kernel\GUI\Text\FontGroup.cpp" />
+    <ClCompile Include="Kernel\GUI\Text\FontProvider.cpp" />
+    <ClCompile Include="Kernel\GUI\Window\ScreenWindow.cpp" />
+    <ClCompile Include="Kernel\GUI\Window\Window.cpp" />
+    <ClCompile Include="Kernel\GUI\Window\WindowManager.cpp" />
+    <ClCompile Include="Kernel\GUI\Window\WindowOperations.cpp" />
+    <ClCompile Include="Kernel\GUI\Window\WinEvent.cpp" />
+    <ClCompile Include="Kernel\Input\Input.cpp" />
+    <ClCompile Include="Kernel\Input\KeyBoardMap.cpp" />
+    <ClCompile Include="Kernel\MemMan\MemMan.c" />
+    <ClCompile Include="Kernel\MemMan\Pool.c" />
+    <ClCompile Include="Kernel\MemMan\stdmem.c" />
+    <ClCompile Include="Kernel\Power\Power.cpp" />
+    <ClCompile Include="Kernel\STDIO\AdvIO.c" />
+    <ClCompile Include="Kernel\STDIO\IORedirectCDC.c" />
+    <ClCompile Include="Kernel\Task\TaskMan.cpp" />
+    <ClCompile Include="MultiInstDriver\ADF4351.c" />
+    <ClCompile Include="MultiInstDriver\HMC832.c" />
+    <ClCompile Include="MultiInstDriver\HMC832_AnalogEnableReg.cpp" />
+    <ClCompile Include="MultiInstDriver\HMC832_AutoCalibration.c" />
+    <ClCompile Include="MultiInstDriver\HMC832_ChargePumpReg.c" />
+    <ClCompile Include="MultiInstDriver\HMC832_Comm.c" />
+    <ClCompile Include="MultiInstDriver\HMC832_DeltaSigmaReg.c" />
+    <ClCompile Include="MultiInstDriver\HMC832_GenericReg.cpp" />
+    <ClCompile Include="MultiInstDriver\HMC832_GPOReg.c" />
+    <ClCompile Include="MultiInstDriver\HMC832_LockDetectReg.c" />
+    <ClCompile Include="MultiInstDriver\HMC832_PhaseDetectorReg.c" />
+    <ClCompile Include="MultiInstDriver\HMC832_VCOSPIReg.c" />
+    <ClCompile Include="MultiInstDriver\HMC832_VCO_ConfigurationReg.c" />
+    <ClCompile Include="MultiInstDriver\HMC832_VCO_EnableReg.c" />
+    <ClCompile Include="MultiInstDriver\HMC832_VCO_OutputDividerReg.c" />
+    <ClCompile Include="MultiInstDriver\HMC832_VCO_OutputPowerControlReg.c" />
+    <ClCompile Include="MultiInstDriver\HMC832_VCO_Reserved.c" />
+    <ClCompile Include="MultiInstDriver\HMC832_VCO_TurningReg.c" />
+    <ClCompile Include="MultiInstDriver\LTC1446.c" />
+    <ClCompile Include="MultiInstDriver\PE43711.c" />
+    <ClCompile Include="MultiInstDriver\SaltyADC.c" />
+    <ClCompile Include="SaltyOS.cpp" />
+    <ClCompile Include="Setup\FlashWriter.cpp" />
+    <ClCompile Include="Setup\FlashAbstract.cpp" />
+    <ClCompile Include="Test\AD7671Test.cpp" />
+    <ClCompile Include="Test\AD9959Test.cpp" />
+    <ClCompile Include="Test\ADCPreformanceTest.cpp" />
+    <ClCompile Include="Test\ADF4351Test.cpp" />
+    <ClCompile Include="Test\ADS8363Test.cpp" />
+    <ClCompile Include="Test\CircleTest.cpp" />
+    <ClCompile Include="Test\ClippedDCTest.cpp" />
+    <ClCompile Include="Test\CPLDGPIOTest.cpp" />
+    <ClCompile Include="Test\EclipseTest.cpp" />
+    <ClCompile Include="Test\FlashFSTest.cpp" />
+    <ClCompile Include="Test\FPGASPITest.cpp" />
+    <ClCompile Include="Test\FT5336Test.cpp" />
+    <ClCompile Include="Test\FFTFreqMeterTest.cpp" />
+    <ClCompile Include="Test\HighPrecisionFreqMeterTest.cpp" />
+    <ClCompile Include="Test\HMC832Test.cpp" />
+    <ClCompile Include="Test\LineTest.cpp" />
+    <ClCompile Include="Test\LOBoardTest.cpp" />
+    <ClCompile Include="Test\LTC1446Test.cpp" />
+    <ClCompile Include="Test\MemTest.cpp" />
+    <ClCompile Include="Test\MenuTest.cpp" />
+    <ClCompile Include="Test\ParPortTest.cpp" />
+    <ClCompile Include="Test\PicTest.cpp" />
+    <ClCompile Include="Test\FFTTest.cpp" />
+    <ClCompile Include="Test\RFFTTest.cpp" />
+    <ClCompile Include="Test\SAFrontEndTest.cpp" />
+    <ClCompile Include="Test\SaltyADCTest.cpp" />
+    <ClCompile Include="Test\Tests.cpp" />
+    <ClCompile Include="Test\TextTest.cpp" />
+    <ClCompile Include="Test\UsPosTest.cpp" />
+    <ClCompile Include="Test\W25QxxTest.cpp" />
+    <ClCompile Include="Test\WaveTest.cpp" />
+    <ClCompile Include="Test\WindowTest.cpp" />
+    <ClCompile Include="Test\ZLG7290Test.cpp" />
+    <ClCompile Include="User\BodePlotter.cpp" />
+    <ClCompile Include="User\BodePlotterCalibration.cpp" />
+    <ClCompile Include="User\BodePlotterDataStore.cpp" />
+    <ClCompile Include="User\BodePlotterFPGAAbstrast.cpp" />
+    <ClCompile Include="User\BodePlotterGraphic.cpp" />
+    <ClCompile Include="User\BodePlotterScanEngine.cpp" />
+    <ClCompile Include="User\DPOChannel.cpp" />
+    <ClCompile Include="User\EquivalentSamplingDecoder.cpp" />
+    <ClCompile Include="User\FMGen.cpp" />
+    <ClCompile Include="User\LoadRecognise.cpp" />
+    <ClCompile Include="User\LoadRecogniseEngine.cpp" />
+    <ClCompile Include="User\LoadRecogniseCharacteristicProvider.cpp" />
+    <ClCompile Include="User\LoadRecogniseSampler.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">O3</Optimization>
+    </ClCompile>
+    <ClCompile Include="User\Oscilloscope.cpp" />
+    <ClCompile Include="User\OscilloscopeFPGAAbstrast.cpp" />
+    <ClCompile Include="User\OscilloscopeInfo.cpp" />
+    <ClCompile Include="User\PointerDrawer.cpp" />
+    <ClCompile Include="User\Receiver.cpp" />
+    <ClCompile Include="User\ReceiverRenesas.cpp" />
+    <ClCompile Include="User\ReceiverFilter.cpp" />
+    <ClCompile Include="User\WBA.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\StartupFiles\startup_stm32f407xx.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32_USB_Device_Library\Class\CDC\Src\usbd_cdc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32_USB_Device_Library\Core\Src\usbd_core.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_can.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cec.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_crc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cryp.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cryp_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dac.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dac_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dcmi.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dcmi_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dfsdm.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma2d.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dsi.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_eth.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_fmpi2c.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_fmpi2c_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_hash.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_hash_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_hcd.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2s.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2s_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_irda.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_iwdg.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_lptim.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_ltdc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_ltdc_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_mmc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_nand.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_nor.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pccard.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pcd.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pcd_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_qspi.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rng.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sai.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sai_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sd.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sdram.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smartcard.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spdifrx.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sram.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_usart.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_wwdg.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_adc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_crc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_dac.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_dma.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_dma2d.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_exti.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_fmc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_fsmc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_gpio.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_i2c.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_lptim.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_pwr.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_rcc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_rng.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_rtc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_sdmmc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_spi.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_tim.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_usart.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_usb.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_utils.c" />
+    <ClCompile Include="$(BSP_ROOT)\StackAndHeap\StackAndHeap.c" />
+    <ClInclude Include="$(BSP_ROOT)\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32_USB_Device_Library\Core\Inc\usbd_core.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32_USB_Device_Library\Core\Inc\usbd_def.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_can.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cec.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_crc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cryp.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cryp_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dac.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dac_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dcmi.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dcmi_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dfsdm.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma2d.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dsi.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_eth.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_fmpi2c.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_fmpi2c_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hash.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hash_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2s.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2s_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_irda.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_iwdg.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_lptim.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_ltdc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_ltdc_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_mmc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_nand.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_nor.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pccard.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_qspi.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rng.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_sai.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_sai_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_sd.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_sdram.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_smartcard.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spdifrx.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_sram.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_wwdg.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_adc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_bus.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_cortex.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_crc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_dac.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_dma.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_dma2d.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_exti.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_fmc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_fsmc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_gpio.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_i2c.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_iwdg.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_lptim.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_pwr.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rcc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rng.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rtc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_sdmmc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_spi.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_system.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_tim.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usart.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_utils.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_wwdg.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Device\ST\STM32F4xx\Include\stm32f4xx.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Device\ST\STM32F4xx\Include\system_stm32f4xx.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\arm_common_tables.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\arm_const_structs.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\arm_math.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\cmsis_armcc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\cmsis_armcc_V6.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\cmsis_gcc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_cm0.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_cm0plus.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_cm3.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_cm4.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_cm7.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_cmFunc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_cmInstr.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_cmSimd.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_sc000.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_sc300.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\RTOS\Template\cmsis_os.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Algorithm\AlgorithmTypes.h" />
+    <ClInclude Include="Algorithm\MemCached\MemCached.h" />
+    <ClInclude Include="Algorithm\SincInterpolation.h" />
+    <ClInclude Include="Algorithm\Transform\DFT\DFT.h" />
+    <ClInclude Include="Algorithm\Transform\FFT\CFFT\CFFT_Radix2.h" />
+    <ClInclude Include="Algorithm\Transform\FFT\CFFT\CFFT_Radix2_MemCached.h" />
+    <ClInclude Include="Algorithm\Transform\FFT\FFT.h" />
+    <ClInclude Include="Algorithm\Transform\FFT\RFFT\RFFT.h" />
+    <ClInclude Include="Algorithm\Transform\TwiddleTable.h" />
+    <ClInclude Include="Algorithm\WindowFunction\WindowFunction.h" />
+    <ClInclude Include="CommonTypes.h" />
+    <ClInclude Include="Driver\AD7606.h" />
+    <ClInclude Include="Driver\AD7671.h" />
+    <ClInclude Include="Driver\AD9959.h" />
+    <ClInclude Include="Driver\AD9959_Reg.h" />
+    <ClInclude Include="Driver\ADS8363.h" />
+    <ClInclude Include="Driver\ASC16.h" />
+    <ClInclude Include="Driver\Encoder_Reg.h" />
+    <ClInclude Include="Driver\FT5336.h" />
+    <ClInclude Include="Driver\FT5336_Reg.h" />
+    <ClInclude Include="Driver\ILI9806G.h" />
+    <ClInclude Include="Driver\LMH6518.h" />
+    <ClInclude Include="Driver\LOBoard.h" />
+    <ClInclude Include="Driver\LowLevelGraphic.h" />
+    <ClInclude Include="Driver\SAFrontEnd.h" />
+    <ClInclude Include="Driver\SRAM.h" />
+    <ClInclude Include="Driver\SST39VFxxxx.h" />
+    <ClInclude Include="Driver\TLV5617.h" />
+    <ClInclude Include="Driver\W25Qxx.h" />
+    <ClInclude Include="Driver\W25Qxx_Reg.h" />
+    <ClInclude Include="Driver\KeyBoard.h" />
+    <ClInclude Include="Driver\ZLG7290_Reg.h" />
+    <ClInclude Include="HAL\Beep.h" />
+    <ClInclude Include="HAL\BoardReset.h" />
+    <ClInclude Include="HAL\Clock.h" />
+    <ClInclude Include="HAL\DMA.h" />
+    <ClInclude Include="HAL\FPGASPIPort.h" />
+    <ClInclude Include="HAL\GPIO_32.h" />
+    <ClInclude Include="HAL\GPIO_CPLD.h" />
+    <ClInclude Include="HAL\SoftSPI.h" />
+    <ClInclude Include="HAL\FSMC.h" />
+    <ClInclude Include="HAL\StandardSPIPort.h" />
+    <ClInclude Include="HAL\UniGPIO.h" />
+    <ClInclude Include="HAL\Hardware.h" />
+    <ClInclude Include="HAL\HCommon.h" />
+    <ClInclude Include="HAL\FPGAParPort.h" />
+    <ClInclude Include="HAL\Interrupt.h" />
+    <ClInclude Include="HAL\HardSPI.h" />
+    <ClInclude Include="HAL\PeripheralBus.h" />
+    <ClInclude Include="HAL\PowerManagement.h" />
+    <ClInclude Include="HAL\UART.h" />
+    <ClInclude Include="HAL\UniSPI.h" />
+    <ClInclude Include="HAL\USB.h" />
+    <ClInclude Include="Kernel\Common\BugCheck.h" />
+    <ClInclude Include="Kernel\Common\Init.h" />
+    <ClInclude Include="Kernel\Common\KCommon.h" />
+    <ClInclude Include="Kernel\Common\KObject.h" />
+    <ClInclude Include="Kernel\FlashFS\FlashFS.h" />
+    <ClInclude Include="Kernel\GUI\Cursor\Cursor.h" />
+    <ClInclude Include="Kernel\GUI\DC\BinderDC.h" />
+    <ClInclude Include="Kernel\GUI\DC\ClippedDC.h" />
+    <ClInclude Include="Kernel\GUI\DC\DC.h" />
+    <ClInclude Include="Kernel\GUI\DC\LCDDC.h" />
+    <ClInclude Include="Kernel\GUI\GUICommon.h" />
+    <ClInclude Include="Kernel\GUI\InputBox\InputBox.h" />
+    <ClInclude Include="Kernel\GUI\Menu\GlobalMenu.h" />
+    <ClInclude Include="Kernel\GUI\Menu\Menu.h" />
+    <ClInclude Include="Kernel\GUI\Menu\MenuItem.h" />
+    <ClInclude Include="Kernel\GUI\Misc\RECT.h" />
+    <ClInclude Include="Kernel\GUI\Picture\DirectDataPic.h" />
+    <ClInclude Include="Kernel\GUI\Picture\FlashFSPic.h" />
+    <ClInclude Include="Kernel\GUI\Picture\IndirectDataPic.h" />
+    <ClInclude Include="Kernel\GUI\Picture\Picture.h" />
+    <ClInclude Include="Kernel\GUI\Shape\Circle.h" />
+    <ClInclude Include="Kernel\GUI\Shape\Eclipse.h" />
+    <ClInclude Include="Kernel\GUI\Shape\Line.h" />
+    <ClInclude Include="Kernel\GUI\Text\DrawString.h" />
+    <ClInclude Include="Kernel\GUI\Text\EstimateString.h" />
+    <ClInclude Include="Kernel\GUI\Text\FontAddressing.h" />
+    <ClInclude Include="Kernel\GUI\Text\FontGroup.h" />
+    <ClInclude Include="Kernel\GUI\Text\FontProvider.h" />
+    <ClInclude Include="Kernel\GUI\Window\MessageCode.h" />
+    <ClInclude Include="Kernel\GUI\Window\ScreenWindow.h" />
+    <ClInclude Include="Kernel\GUI\Window\Window.h" />
+    <ClInclude Include="Kernel\GUI\Window\WindowManager.h" />
+    <ClInclude Include="Kernel\GUI\Window\WindowOperations.h" />
+    <ClInclude Include="Kernel\GUI\Window\WinEvent.h" />
+    <ClInclude Include="Kernel\Input\Input.h" />
+    <ClInclude Include="Kernel\Input\KeyBoardMap.h" />
+    <ClInclude Include="Kernel\Input\KeyCode.h" />
+    <ClInclude Include="Kernel\MemMan\MemMan.h" />
+    <ClInclude Include="Kernel\MemMan\Pool.h" />
+    <ClInclude Include="Kernel\Power\Power.h" />
+    <ClInclude Include="Kernel\STDIO\AdvIO.h" />
+    <ClInclude Include="Kernel\Task\TaskMan.h" />
+    <ClInclude Include="MultiInstDriver\ADF4351.h" />
+    <ClInclude Include="MultiInstDriver\ADF4351Reg.h" />
+    <ClInclude Include="MultiInstDriver\HMC832.h" />
+    <ClInclude Include="MultiInstDriver\LTC1446.h" />
+    <ClInclude Include="MultiInstDriver\PE43711.h" />
+    <ClInclude Include="MultiInstDriver\SaltyADC.h" />
+    <ClInclude Include="Setup\FlashAbstract.h" />
+    <ClInclude Include="Setup\FlashWriter.h" />
+    <ClInclude Include="stm32f4xx_hal_conf.h" />
+    <ClInclude Include="Test\Tests.h" />
+    <ClInclude Include="usbd_cdc_if.h" />
+    <ClInclude Include="usbd_conf.h" />
+    <ClInclude Include="usbd_desc.h" />
+    <ClInclude Include="User\BodePlotterCalibration.h" />
+    <ClInclude Include="User\BodePlotterCursor.h" />
+    <ClInclude Include="User\BodePlotterDataStore.h" />
+    <ClInclude Include="User\BodePlotterFPGAAbstrast.h" />
+    <ClInclude Include="User\BodePlotterGraphic.h" />
+    <ClInclude Include="User\BodePlotterScanEngine.h" />
+    <ClInclude Include="User\DPOChannel.h" />
+    <ClInclude Include="User\EquivalentSamplingDecoder.h" />
+    <ClInclude Include="User\LoadRecogniseContext.h" />
+    <ClInclude Include="User\LoadRecogniseCharacteristicProvider.h" />
+    <ClInclude Include="User\LoadRecogniseEngine.h" />
+    <ClInclude Include="User\LoadRecogniseSampler.h" />
+    <ClInclude Include="User\Oscilloscope.h" />
+    <ClInclude Include="User\OscilloscopeFPGAAbstrast.h" />
+    <ClInclude Include="User\OscilloscopeInfo.h" />
+    <ClInclude Include="User\PointerDrawer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="SaltyOS-Debug.vgdbsettings" />
+    <None Include="SaltyOS-Release.vgdbsettings" />
+    <None Include="stm32.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="stm32.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

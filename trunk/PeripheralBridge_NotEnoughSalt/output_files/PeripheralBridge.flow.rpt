@@ -1,0 +1,142 @@
+Flow report for PeripheralBridge
+Tue May 01 16:29:55 2018
+Quartus Prime Version 17.0.2 Build 602 07/19/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Flow Summary                                                            ;
++-----------------------+-------------------------------------------------+
+; Flow Status           ; Successful - Tue May 01 16:29:55 2018           ;
+; Quartus Prime Version ; 17.0.2 Build 602 07/19/2017 SJ Standard Edition ;
+; Revision Name         ; PeripheralBridge                                ;
+; Top-level Entity Name ; PeripheralBridge                                ;
+; Family                ; MAX II                                          ;
+; Device                ; EPM570T144C5                                    ;
+; Timing Models         ; Final                                           ;
+; Total logic elements  ; 492 / 570 ( 86 % )                              ;
+; Total pins            ; 116 / 116 ( 100 % )                             ;
+; Total virtual pins    ; 0                                               ;
+; UFM blocks            ; 0 / 1 ( 0 % )                                   ;
++-----------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 05/01/2018 16:29:30 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; PeripheralBridge    ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                    ;
++-----------------------------------------------------------+------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                                           ; Value                                    ; Default Value ; Entity Name ; Section Id     ;
++-----------------------------------------------------------+------------------------------------------+---------------+-------------+----------------+
+; ALLOW_LVTTL_LVCMOS_INPUT_LEVELS_TO_OVERDRIVE_INPUT_BUFFER ; On                                       ; Off           ; --          ; --             ;
+; AUTO_RESOURCE_SHARING                                     ; On                                       ; Off           ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                                     ; 58128533172371.152516337012320           ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME                                  ; NA                                       ; --            ; --          ; TB             ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH                      ; TB                                       ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT                                    ; Vhdl                                     ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                                       ; ModelSim-Altera (VHDL)                   ; <None>        ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS                              ; TEST_BENCH_MODE                          ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                                       ; simulation/modelsim/PeripheralBridge.vht ; --            ; --          ; TB             ;
+; EDA_TEST_BENCH_MODULE_NAME                                ; TB                                       ; --            ; --          ; TB             ;
+; EDA_TEST_BENCH_NAME                                       ; TB                                       ; --            ; --          ; eda_simulation ;
+; EDA_TIME_SCALE                                            ; 1 ps                                     ; --            ; --          ; eda_simulation ;
+; FITTER_EFFORT                                             ; Standard Fit                             ; Auto Fit      ; --          ; --             ;
+; FIT_ATTEMPTS_TO_SKIP                                      ; 0                                        ; 0.0           ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP                                    ; 85                                       ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP                                    ; 0                                        ; --            ; --          ; --             ;
+; NUM_PARALLEL_PROCESSORS                                   ; All                                      ; --            ; --          ; --             ;
+; OPTIMIZATION_MODE                                         ; Aggressive Performance                   ; Balanced      ; --          ; --             ;
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC                            ; On                                       ; Off           ; --          ; --             ;
+; PHYSICAL_SYNTHESIS_REGISTER_RETIMING                      ; On                                       ; Off           ; --          ; --             ;
+; PLACEMENT_EFFORT_MULTIPLIER                               ; 4.0                                      ; 1.0           ; --          ; --             ;
+; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR                     ; 3.3V                                     ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION                             ; No Heat Sink With Still Air              ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY                                  ; output_files                             ; --            ; --          ; --             ;
+; REMOVE_REDUNDANT_LOGIC_CELLS                              ; On                                       ; Off           ; --          ; --             ;
+; ROUTER_TIMING_OPTIMIZATION_LEVEL                          ; MAXIMUM                                  ; Normal        ; --          ; --             ;
+; SMART_RECOMPILE                                           ; On                                       ; Off           ; --          ; --             ;
+; TIMEQUEST_MULTICORNER_ANALYSIS                            ; On                                       ; Off           ; --          ; --             ;
++-----------------------------------------------------------+------------------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 620 MB              ; 00:00:27                           ;
+; Fitter                    ; 00:00:04     ; 1.0                     ; 1166 MB             ; 00:00:07                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 518 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 530 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 485 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:21     ; --                      ; --                  ; 00:00:38                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                          ;
++---------------------------+------------------+-------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name     ; OS Version ; Processor type ;
++---------------------------+------------------+-------------+------------+----------------+
+; Analysis & Synthesis      ; Wty-pc           ; Windows 8.1 ; 6.3        ; x86_64         ;
+; Fitter                    ; Wty-pc           ; Windows 8.1 ; 6.3        ; x86_64         ;
+; Assembler                 ; Wty-pc           ; Windows 8.1 ; 6.3        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Wty-pc           ; Windows 8.1 ; 6.3        ; x86_64         ;
+; EDA Netlist Writer        ; Wty-pc           ; Windows 8.1 ; 6.3        ; x86_64         ;
++---------------------------+------------------+-------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off PeripheralBridge -c PeripheralBridge
+quartus_fit --read_settings_files=off --write_settings_files=off PeripheralBridge -c PeripheralBridge
+quartus_asm --read_settings_files=off --write_settings_files=off PeripheralBridge -c PeripheralBridge
+quartus_sta PeripheralBridge -c PeripheralBridge
+quartus_eda --read_settings_files=off --write_settings_files=off PeripheralBridge -c PeripheralBridge
+
+
+

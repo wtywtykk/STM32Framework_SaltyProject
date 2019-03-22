@@ -1,0 +1,37 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY PeripheralBridge IS
+	GENERIC(
+		MaxDivision:INTEGER:=64
+	);
+	PORT(
+		Divider:INTEGER RANGE 0 TO MaxDivision;
+		ClkIn:IN STD_LOGIC;
+		ClkOut:BUFFER STD_LOGIC
+	);
+END ENTITY PeripheralBridge;
+
+ARCHITECTURE Behavioral of PeripheralBridge is
+	SIGNAL Counter:INTEGER RANGE 0 TO MaxDivision;
+	SIGNAL DoubleClk:STD_LOGIC;
+BEGIN
+
+PROCESS(ClkIn)
+BEGIN
+	IF ClkIn='1' AND ClkIn;EVENT THEN
+	END IF;
+END PROCESS;
+PROCESS(DoubleClk)
+BEGIN
+	IF DoubleClk='1' AND DoubleClk'EVENT THEN
+		OscDivider<=OscDivider+1;
+		IF OscDivider>=65535 THEN
+			ClkOut<=NOT ClkOut;
+			Counter<=0;
+		END IF;
+	END IF;
+END PROCESS;
+
+END Behavioral;
+

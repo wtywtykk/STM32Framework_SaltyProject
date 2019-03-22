@@ -1,0 +1,70 @@
+Library IEEE;
+Use IEEE.STD_LOGIC_1164.ALL;
+
+Entity Port0Mux Is
+	Port(
+		Clk:In STD_LOGIC;
+		Rst:In STD_LOGIC;
+		
+		IOPort:InOut STD_LOGIC_VECTOR(8 DownTo 0);
+		
+		DedicatedFunctionIOPort:InOut STD_LOGIC_VECTOR(8 DownTo 0);
+		GenericIOPort:InOut STD_LOGIC_VECTOR(8 DownTo 0);
+
+		RegSel:In INTEGER RANGE 0 To 4;
+		RD_Data:Out STD_LOGIC_VECTOR(15 DownTo 0);
+		WR_Clk:In STD_LOGIC;
+		WR_Enable:In STD_LOGIC;
+		WR_Data:In STD_LOGIC_VECTOR(15 DownTo 0);
+		
+		DedicatedFunctionUsed:In STD_LOGIC
+	);
+End Entity Port0Mux;
+
+Architecture Behavioral Of Port0Mux Is
+
+Component PortController Is
+	Port(
+		Clk:In STD_LOGIC;
+		Rst:In STD_LOGIC;
+		
+		IOPort:InOut STD_LOGIC_VECTOR(8 DownTo 0);
+		
+		FuncSel:In INTEGER RANGE 0 To 4;
+		RD_Data:Out STD_LOGIC_VECTOR(15 DownTo 0);
+		WR_Clk:In STD_LOGIC;
+		WR_Enable:In STD_LOGIC;
+		WR_Data:In STD_LOGIC_VECTOR(15 DownTo 0)
+	);
+End Component PortController;
+
+Begin
+
+GenericPort:PortController
+	Port Map(
+		Clk=>Clk,
+		Rst=>Rst,
+		IOPort=>IOPort(I),
+		FuncSel=>GPIOFuncSelect,
+		RD_Data=>GPIOReadValue(I),
+		WR_Clk=>InClk,
+		WR_Enable=>GPIOWriteEnable(I),
+		WR_Data=>InData
+	);
+
+Process(Config_HiZ,Dir,OutputData)
+Begin
+	If Config_HiZ='1' Then
+		IOPort<="ZZZZZZZZZ";
+	Else
+		For I In 0 To 8 Loop
+			If Dir(I)='1' Then
+				IOPort(I)<=OutPutData(I);
+			Else
+				IOPort(I)<='Z';
+			End If;
+		End Loop;
+	End If;
+End Process;
+
+End Behavioral;

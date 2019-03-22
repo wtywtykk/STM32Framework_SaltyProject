@@ -1,0 +1,424 @@
+Analysis & Synthesis report for PeripheralBridge
+Tue May 01 16:29:42 2018
+Quartus Prime Version 17.0.2 Build 602 07/19/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Port0Mux:Port4|DedicatedFunctionController:DedicatedPort|FreqDivider:ClkDiv
+ 11. Port Connectivity Checks: "PortController:\Gen_IOController2:7:PortX"
+ 12. Port Connectivity Checks: "PortController:\Gen_IOController2:6:PortX"
+ 13. Port Connectivity Checks: "PortController:\Gen_IOController2:5:PortX"
+ 14. Port Connectivity Checks: "PortController:\Gen_IOController1:3:PortX"
+ 15. Port Connectivity Checks: "PortController:\Gen_IOController1:2:PortX"
+ 16. Port Connectivity Checks: "PortController:\Gen_IOController1:1:PortX"
+ 17. Port Connectivity Checks: "PortController:\Gen_IOController1:0:PortX"
+ 18. Port Connectivity Checks: "Port0Mux:Port4|DedicatedFunctionController:DedicatedPort|FreqDivider:ClkDiv"
+ 19. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++-----------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue May 01 16:29:42 2018           ;
+; Quartus Prime Version       ; 17.0.2 Build 602 07/19/2017 SJ Standard Edition ;
+; Revision Name               ; PeripheralBridge                                ;
+; Top-level Entity Name       ; PeripheralBridge                                ;
+; Family                      ; MAX II                                          ;
+; Total logic elements        ; 637                                             ;
+; Total pins                  ; 116                                             ;
+; Total virtual pins          ; 0                                               ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                                   ;
++-----------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EPM570T144C5       ;                    ;
+; Top-level entity name                                                      ; PeripheralBridge   ; PeripheralBridge   ;
+; Family name                                                                ; MAX II             ; Cyclone V          ;
+; Use smart compilation                                                      ; On                 ; Off                ;
+; Maximum processors allowed for parallel compilation                        ; All                ;                    ;
+; Remove Redundant Logic Cells                                               ; On                 ; Off                ;
+; Auto Resource Sharing                                                      ; On                 ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                               ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------+---------+
+; PortController.vhd               ; yes             ; User VHDL File  ; F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/PortController.vhd              ;         ;
+; FSMCController.vhd               ; yes             ; User VHDL File  ; F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/FSMCController.vhd              ;         ;
+; EdgeDetector.vhd                 ; yes             ; User VHDL File  ; F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/EdgeDetector.vhd                ;         ;
+; FreqDivider.vhd                  ; yes             ; User VHDL File  ; F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/FreqDivider.vhd                 ;         ;
+; PeripheralBridge.vhd             ; yes             ; User VHDL File  ; F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/PeripheralBridge.vhd            ;         ;
+; PeripBridgeTypes.vhd             ; yes             ; User VHDL File  ; F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/PeripBridgeTypes.vhd            ;         ;
+; ParPortController.vhd            ; yes             ; User VHDL File  ; F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/ParPortController.vhd           ;         ;
+; DedicatedFunctionController.vhd  ; yes             ; User VHDL File  ; F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/DedicatedFunctionController.vhd ;         ;
+; Port0Mux.vhd                     ; yes             ; User VHDL File  ; F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/Port0Mux.vhd                    ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                     ;
++---------------------------------------------+-----------------------------------+
+; Resource                                    ; Usage                             ;
++---------------------------------------------+-----------------------------------+
+; Total logic elements                        ; 637                               ;
+;     -- Combinational with no register       ; 334                               ;
+;     -- Register only                        ; 155                               ;
+;     -- Combinational with a register        ; 148                               ;
+;                                             ;                                   ;
+; Logic element usage by number of LUT inputs ;                                   ;
+;     -- 4 input functions                    ; 281                               ;
+;     -- 3 input functions                    ; 116                               ;
+;     -- 2 input functions                    ; 81                                ;
+;     -- 1 input functions                    ; 4                                 ;
+;     -- 0 input functions                    ; 0                                 ;
+;                                             ;                                   ;
+; Logic elements by mode                      ;                                   ;
+;     -- normal mode                          ; 629                               ;
+;     -- arithmetic mode                      ; 8                                 ;
+;     -- qfbk mode                            ; 0                                 ;
+;     -- register cascade mode                ; 0                                 ;
+;     -- synchronous clear/load mode          ; 10                                ;
+;     -- asynchronous clear/load mode         ; 192                               ;
+;                                             ;                                   ;
+; Total registers                             ; 303                               ;
+; Total logic cells in carry chains           ; 10                                ;
+; I/O pins                                    ; 116                               ;
+; Maximum fan-out node                        ; FSMCController:FSMCCtrl|InDataClk ;
+; Maximum fan-out                             ; 187                               ;
+; Total fan-out                               ; 2723                              ;
+; Average fan-out                             ; 3.62                              ;
++---------------------------------------------+-----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                          ;
++---------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
+; Compilation Hierarchy Node                        ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                    ; Entity Name                 ; Library Name ;
++---------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
+; |PeripheralBridge                                 ; 637 (257)   ; 303          ; 0          ; 116  ; 0            ; 334 (237)    ; 155 (18)          ; 148 (2)          ; 10 (0)          ; 0 (0)      ; |PeripheralBridge                                                                                                      ; PeripheralBridge            ; work         ;
+;    |FSMCController:FSMCCtrl|                      ; 18 (18)     ; 0            ; 0          ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PeripheralBridge|FSMCController:FSMCCtrl                                                                              ; FSMCController              ; work         ;
+;    |ParPortController:ParPort|                    ; 18 (18)     ; 16           ; 0          ; 0    ; 0            ; 2 (2)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PeripheralBridge|ParPortController:ParPort                                                                            ; ParPortController           ; work         ;
+;    |Port0Mux:Port4|                               ; 174 (0)     ; 134          ; 0          ; 0    ; 0            ; 40 (0)       ; 58 (0)            ; 76 (0)           ; 10 (0)          ; 0 (0)      ; |PeripheralBridge|Port0Mux:Port4                                                                                       ; Port0Mux                    ; work         ;
+;       |DedicatedFunctionController:DedicatedPort| ; 125 (119)   ; 115          ; 0          ; 0    ; 0            ; 10 (9)       ; 49 (49)           ; 66 (61)          ; 10 (10)         ; 0 (0)      ; |PeripheralBridge|Port0Mux:Port4|DedicatedFunctionController:DedicatedPort                                             ; DedicatedFunctionController ; work         ;
+;          |FreqDivider:ClkDiv|                     ; 6 (4)       ; 5            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 5 (4)            ; 0 (0)           ; 0 (0)      ; |PeripheralBridge|Port0Mux:Port4|DedicatedFunctionController:DedicatedPort|FreqDivider:ClkDiv                          ; FreqDivider                 ; work         ;
+;             |EdgeDetector:FreqDoubler|            ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PeripheralBridge|Port0Mux:Port4|DedicatedFunctionController:DedicatedPort|FreqDivider:ClkDiv|EdgeDetector:FreqDoubler ; EdgeDetector                ; work         ;
+;       |PortController:GenericPort|                ; 49 (49)     ; 19           ; 0          ; 0    ; 0            ; 30 (30)      ; 9 (9)             ; 10 (10)          ; 0 (0)           ; 0 (0)      ; |PeripheralBridge|Port0Mux:Port4|PortController:GenericPort                                                            ; PortController              ; work         ;
+;    |PortController:\Gen_IOController1:0:PortX|    ; 25 (25)     ; 19           ; 0          ; 0    ; 0            ; 6 (6)        ; 9 (9)             ; 10 (10)          ; 0 (0)           ; 0 (0)      ; |PeripheralBridge|PortController:\Gen_IOController1:0:PortX                                                            ; PortController              ; work         ;
+;    |PortController:\Gen_IOController1:1:PortX|    ; 24 (24)     ; 19           ; 0          ; 0    ; 0            ; 5 (5)        ; 9 (9)             ; 10 (10)          ; 0 (0)           ; 0 (0)      ; |PeripheralBridge|PortController:\Gen_IOController1:1:PortX                                                            ; PortController              ; work         ;
+;    |PortController:\Gen_IOController1:2:PortX|    ; 25 (25)     ; 19           ; 0          ; 0    ; 0            ; 6 (6)        ; 9 (9)             ; 10 (10)          ; 0 (0)           ; 0 (0)      ; |PeripheralBridge|PortController:\Gen_IOController1:2:PortX                                                            ; PortController              ; work         ;
+;    |PortController:\Gen_IOController1:3:PortX|    ; 25 (25)     ; 19           ; 0          ; 0    ; 0            ; 6 (6)        ; 9 (9)             ; 10 (10)          ; 0 (0)           ; 0 (0)      ; |PeripheralBridge|PortController:\Gen_IOController1:3:PortX                                                            ; PortController              ; work         ;
+;    |PortController:\Gen_IOController2:5:PortX|    ; 24 (24)     ; 19           ; 0          ; 0    ; 0            ; 5 (5)        ; 9 (9)             ; 10 (10)          ; 0 (0)           ; 0 (0)      ; |PeripheralBridge|PortController:\Gen_IOController2:5:PortX                                                            ; PortController              ; work         ;
+;    |PortController:\Gen_IOController2:6:PortX|    ; 24 (24)     ; 19           ; 0          ; 0    ; 0            ; 5 (5)        ; 9 (9)             ; 10 (10)          ; 0 (0)           ; 0 (0)      ; |PeripheralBridge|PortController:\Gen_IOController2:6:PortX                                                            ; PortController              ; work         ;
+;    |PortController:\Gen_IOController2:7:PortX|    ; 23 (23)     ; 19           ; 0          ; 0    ; 0            ; 4 (4)        ; 9 (9)             ; 10 (10)          ; 0 (0)           ; 0 (0)      ; |PeripheralBridge|PortController:\Gen_IOController2:7:PortX                                                            ; PortController              ; work         ;
++---------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 303   ;
+; Number of registers using Synchronous Clear  ; 10    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 192   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 247   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |PeripheralBridge|Port0Mux:Port4|DedicatedFunctionController:DedicatedPort|ChannelABuf[14]    ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |PeripheralBridge|Port0Mux:Port4|DedicatedFunctionController:DedicatedPort|ConvertCounter[3]  ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |PeripheralBridge|Port0Mux:Port4|DedicatedFunctionController:DedicatedPort|SendBuf[1]         ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |PeripheralBridge|Port0Mux:Port4|DedicatedFunctionController:DedicatedPort|SendData[4]        ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 18 LEs               ; 9 LEs                  ; Yes        ; |PeripheralBridge|Port0Mux:Port4|PortController:GenericPort|OutputData[3]                     ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |PeripheralBridge|Port0Mux:Port4|DedicatedFunctionController:DedicatedPort|TransferCounter[4] ;
+; 5:1                ; 63 bits   ; 189 LEs       ; 126 LEs              ; 63 LEs                 ; Yes        ; |PeripheralBridge|PortController:\Gen_IOController1:0:PortX|OutputData[0]                     ;
+; 13:1               ; 7 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; No         ; |PeripheralBridge|OutData[14]                                                                 ;
+; 48:1               ; 7 bits    ; 224 LEs       ; 175 LEs              ; 49 LEs                 ; No         ; |PeripheralBridge|OutData[8]                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Port0Mux:Port4|DedicatedFunctionController:DedicatedPort|FreqDivider:ClkDiv ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; maxdivision    ; 7     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PortController:\Gen_IOController2:7:PortX"                                                           ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                             ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; dedicatedinport       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dedicatedoutport      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dedicatedoutmask      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dedicatedfunctionused ; Input  ; Info     ; Stuck at GND                                                                        ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PortController:\Gen_IOController2:6:PortX"                                                           ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                             ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; dedicatedinport       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dedicatedoutport      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dedicatedoutmask      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dedicatedfunctionused ; Input  ; Info     ; Stuck at GND                                                                        ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PortController:\Gen_IOController2:5:PortX"                                                           ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                             ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; dedicatedinport       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dedicatedoutport      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dedicatedoutmask      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dedicatedfunctionused ; Input  ; Info     ; Stuck at GND                                                                        ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PortController:\Gen_IOController1:3:PortX"                                                           ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                             ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; dedicatedinport       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dedicatedoutport      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dedicatedoutmask      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dedicatedfunctionused ; Input  ; Info     ; Stuck at GND                                                                        ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PortController:\Gen_IOController1:2:PortX"                                                           ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                             ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; dedicatedinport       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dedicatedoutport      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dedicatedoutmask      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dedicatedfunctionused ; Input  ; Info     ; Stuck at GND                                                                        ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PortController:\Gen_IOController1:1:PortX"                                                           ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                             ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; dedicatedinport       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dedicatedoutport      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dedicatedoutmask      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dedicatedfunctionused ; Input  ; Info     ; Stuck at GND                                                                        ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PortController:\Gen_IOController1:0:PortX"                                                           ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                             ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; dedicatedinport       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dedicatedoutport      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dedicatedoutmask      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dedicatedfunctionused ; Input  ; Info     ; Stuck at GND                                                                        ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Port0Mux:Port4|DedicatedFunctionController:DedicatedPort|FreqDivider:ClkDiv" ;
++------------+-------+----------+-------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                 ;
++------------+-------+----------+-------------------------------------------------------------------------+
+; divider[2] ; Input ; Info     ; Stuck at VCC                                                            ;
+; divider[1] ; Input ; Info     ; Stuck at GND                                                            ;
+; divider[0] ; Input ; Info     ; Stuck at VCC                                                            ;
++------------+-------+----------+-------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.0.2 Build 602 07/19/2017 SJ Standard Edition
+    Info: Processing started: Tue May 01 16:29:30 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PeripheralBridge -c PeripheralBridge
+Info (16303): Aggressive Performance optimization mode selected -- timing performance will be prioritized at the potential cost of increased logic area and compilation time
+    Info (16304): Mode behavior is affected by advanced setting Restructure Multiplexers (default for this mode is Off)
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file portcontroller.vhd
+    Info (12022): Found design unit 1: PortController-Behavioral File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/PortController.vhd Line: 24
+    Info (12023): Found entity 1: PortController File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/PortController.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file fsmccontroller.vhd
+    Info (12022): Found design unit 1: FSMCController-Behavioral File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/FSMCController.vhd Line: 20
+    Info (12023): Found entity 1: FSMCController File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/FSMCController.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file edgedetector.vhd
+    Info (12022): Found design unit 1: EdgeDetector-Behavioral File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/EdgeDetector.vhd Line: 11
+    Info (12023): Found entity 1: EdgeDetector File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/EdgeDetector.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file freqdivider.vhd
+    Info (12022): Found design unit 1: FreqDivider-Behavioral File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/FreqDivider.vhd Line: 15
+    Info (12023): Found entity 1: FreqDivider File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/FreqDivider.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file peripheralbridge.vhd
+    Info (12022): Found design unit 1: PeripheralBridge-Behavioral File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/PeripheralBridge.vhd Line: 27
+    Info (12023): Found entity 1: PeripheralBridge File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/PeripheralBridge.vhd Line: 8
+Info (12021): Found 1 design units, including 0 entities, in source file peripbridgetypes.vhd
+    Info (12022): Found design unit 1: PeripBirdgeTypes File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/PeripBridgeTypes.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file parportcontroller.vhd
+    Info (12022): Found design unit 1: ParPortController-Behavioral File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/ParPortController.vhd Line: 17
+    Info (12023): Found entity 1: ParPortController File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/ParPortController.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file dedicatedfunctioncontroller.vhd
+    Info (12022): Found design unit 1: DedicatedFunctionController-Behavioral File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/DedicatedFunctionController.vhd Line: 23
+    Info (12023): Found entity 1: DedicatedFunctionController File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/DedicatedFunctionController.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file port0mux.vhd
+    Info (12022): Found design unit 1: Port0Mux-Behavioral File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/Port0Mux.vhd Line: 21
+    Info (12023): Found entity 1: Port0Mux File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/Port0Mux.vhd Line: 4
+Info (12127): Elaborating entity "PeripheralBridge" for the top level hierarchy
+Info (12128): Elaborating entity "FSMCController" for hierarchy "FSMCController:FSMCCtrl" File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/PeripheralBridge.vhd Line: 147
+Info (12128): Elaborating entity "Port0Mux" for hierarchy "Port0Mux:Port4" File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/PeripheralBridge.vhd Line: 160
+Info (12128): Elaborating entity "PortController" for hierarchy "Port0Mux:Port4|PortController:GenericPort" File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/Port0Mux.vhd Line: 70
+Info (12128): Elaborating entity "DedicatedFunctionController" for hierarchy "Port0Mux:Port4|DedicatedFunctionController:DedicatedPort" File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/Port0Mux.vhd Line: 86
+Warning (10036): Verilog HDL or VHDL warning at DedicatedFunctionController.vhd(40): object "ADC_BUSY" assigned a value but never read File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/DedicatedFunctionController.vhd Line: 40
+Info (12128): Elaborating entity "FreqDivider" for hierarchy "Port0Mux:Port4|DedicatedFunctionController:DedicatedPort|FreqDivider:ClkDiv" File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/DedicatedFunctionController.vhd Line: 64
+Info (12128): Elaborating entity "EdgeDetector" for hierarchy "Port0Mux:Port4|DedicatedFunctionController:DedicatedPort|FreqDivider:ClkDiv|EdgeDetector:FreqDoubler" File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/FreqDivider.vhd Line: 28
+Info (12128): Elaborating entity "ParPortController" for hierarchy "ParPortController:ParPort" File: F:/WorkDir/EleProjects/SaltyProject/PeripheralBridge_NotEnoughSalt_ADS8363/PeripheralBridge.vhd Line: 208
+Info (21057): Implemented 753 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 26 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21060): Implemented 88 bidirectional pins
+    Info (21061): Implemented 637 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 620 megabytes
+    Info: Processing ended: Tue May 01 16:29:42 2018
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:27
+
+

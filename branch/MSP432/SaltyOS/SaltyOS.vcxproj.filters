@@ -1,0 +1,731 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source files">
+      <UniqueIdentifier>{b7b02ce1-0089-48a8-a0c2-804897186054}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{a958dfc9-299a-4106-962b-705b401b71f8}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource files">
+      <UniqueIdentifier>{d0f0e296-456d-43db-87de-e35af5dd6f22}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="VisualGDB settings">
+      <UniqueIdentifier>{34b1fc9e-a903-4606-b54f-f6c8723fa09a}</UniqueIdentifier>
+      <Extensions>*.vgdbsettings</Extensions>
+    </Filter>
+    <Filter Include="Source files\Device-specific files">
+      <UniqueIdentifier>{7ebf428c-bd6a-49ca-9ae5-f8869ecbc4c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\Device-specific files">
+      <UniqueIdentifier>{ca34d920-3208-42e6-849c-deaa09994176}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Driver">
+      <UniqueIdentifier>{772e72d3-ff81-4833-998a-6d0703bf675a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HAL">
+      <UniqueIdentifier>{5bcce926-682b-4c26-b5f5-dc5954a5da56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernel">
+      <UniqueIdentifier>{afeed11a-4108-4f70-8795-910d59345d2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HAL\Header">
+      <UniqueIdentifier>{3d191345-f01c-4ede-861e-938baad8c437}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HAL\Source">
+      <UniqueIdentifier>{6ff62866-481a-4da5-af70-260199c8b04c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Driver\FT5336">
+      <UniqueIdentifier>{3640671c-087d-4f90-a069-2a2c254e06f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Driver\IL9806G">
+      <UniqueIdentifier>{7126bd1a-66c8-4b3c-bca6-27f6696ea021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Driver\TLV5617">
+      <UniqueIdentifier>{dd89d0fd-a528-462a-85b9-3f5b01e92aef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernel\Common">
+      <UniqueIdentifier>{791d4363-29f0-41fe-9022-3248004f0720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernel\GUI">
+      <UniqueIdentifier>{9f9c8337-5fff-4565-878e-df044e9d35f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernel\GUI\DC">
+      <UniqueIdentifier>{ff3b8a7d-c7b5-4ce3-ac3f-8cd20c5762b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernel\GUI\Text">
+      <UniqueIdentifier>{27a23b32-ef3d-4e84-85a7-79a1555d6b8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernel\Power">
+      <UniqueIdentifier>{6c128042-8348-41cb-94e9-e3d8f7efdcb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernel\GUI\Shape">
+      <UniqueIdentifier>{ac96c414-2995-43ee-9594-1935731047cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{51902a97-e5ad-47d3-8a69-ed0053774805}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithm">
+      <UniqueIdentifier>{1323c1bb-3918-4c00-987e-7cb97f108916}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernel\MemMan">
+      <UniqueIdentifier>{69e50f78-6241-4e4f-be03-79ed48fe4c4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User">
+      <UniqueIdentifier>{f776c48c-a0d0-4331-b8b1-e35022dc8731}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MultiInstDriver">
+      <UniqueIdentifier>{6ea1503d-bf54-433c-91f3-cfdcde238a63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MultiInstDriver\LTC1446">
+      <UniqueIdentifier>{d610631b-ca2a-432c-8096-4cb190cfa69f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernel\GUI\Picture">
+      <UniqueIdentifier>{1cfb60f2-9b99-4f1a-8c0a-62a7e5815f48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernel\GUI\Misc">
+      <UniqueIdentifier>{2b2552ff-48db-474d-ab10-6144ee80cd52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithm\MemCached">
+      <UniqueIdentifier>{30e93f18-8d00-4972-bd8e-ab029c3c9257}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithm\WindowFunction">
+      <UniqueIdentifier>{212aceb9-d9bf-4ebc-9e71-72bdf5ed1bab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithm\Transform">
+      <UniqueIdentifier>{991758a2-e94c-4ec4-8736-cf5f2b093b14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithm\Transform\FFT">
+      <UniqueIdentifier>{3ab9e941-0a0c-406d-bd90-60f0ce82709b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithm\Transform\FFT\CFFT">
+      <UniqueIdentifier>{8b2ba8f5-36e8-4b89-a402-86cb61273fa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithm\Transform\FFT\RFFT">
+      <UniqueIdentifier>{793dbb15-8f4b-4aaa-a5c5-2baf49a69774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithm\Transform\DFT">
+      <UniqueIdentifier>{e2b29776-391f-4c3c-a590-1fd2394cc059}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{ce4a9a57-802c-4554-a81d-365d1cfc4346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User\CurMeas">
+      <UniqueIdentifier>{222da064-8661-4af7-b7d9-1eb1c7e43703}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MultiInstDriver\PGA11x">
+      <UniqueIdentifier>{3c8be09d-2822-47b3-87ba-d190014d69bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MultiInstDriver\DAC8311">
+      <UniqueIdentifier>{7e3891df-a956-4376-bbc0-6576b955ede1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Driver\ADS1284">
+      <UniqueIdentifier>{5eeae5fc-9196-4d3a-9bb8-b4a7afa77344}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="HAL\Clock.c">
+      <Filter>HAL\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="HAL\PowerManagement.c">
+      <Filter>HAL\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\FT5336.c">
+      <Filter>Driver\FT5336</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\ILI9806G.c">
+      <Filter>Driver\IL9806G</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\TLV5617.c">
+      <Filter>Driver\TLV5617</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\GUI\DC\BinderDC.cpp">
+      <Filter>Kernel\GUI\DC</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\GUI\DC\LCDDC.cpp">
+      <Filter>Kernel\GUI\DC</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\GUI\Text\DrawString.cpp">
+      <Filter>Kernel\GUI\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\GUI\Text\FontAddressing.cpp">
+      <Filter>Kernel\GUI\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\GUI\Text\FontGroup.cpp">
+      <Filter>Kernel\GUI\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\GUI\Text\FontProvider.cpp">
+      <Filter>Kernel\GUI\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\Power\Power.cpp">
+      <Filter>Kernel\Power</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\Common\KObject.cpp">
+      <Filter>Kernel\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="SaltyOS.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\GUI\DC\ClippedDC.cpp">
+      <Filter>Kernel\GUI\DC</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\GUI\Shape\Line.cpp">
+      <Filter>Kernel\GUI\Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\GUI\Shape\Circle.cpp">
+      <Filter>Kernel\GUI\Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\GUI\Shape\Eclipse.cpp">
+      <Filter>Kernel\GUI\Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\CircleTest.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\WaveTest.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\EclipseTest.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\LineTest.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Tests.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\TextTest.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\ClippedDCTest.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\FT5336Test.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\LTC1446Test.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\GUI\DC\DC.cpp">
+      <Filter>Kernel\GUI\DC</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\MemMan\MemMan.c">
+      <Filter>Kernel\MemMan</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\Common\BugCheck.c">
+      <Filter>Kernel\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\Common\Init.cpp">
+      <Filter>Kernel\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\MemMan\Pool.c">
+      <Filter>Kernel\MemMan</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\MemMan\stdmem.c">
+      <Filter>Kernel\MemMan</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\MemTest.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\LowLevelGraphic.c">
+      <Filter>Driver\IL9806G</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\ASC16.cpp">
+      <Filter>Driver\IL9806G</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\PicTest.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="HAL\SoftSPI.c">
+      <Filter>HAL\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="HAL\GPIO_32.c">
+      <Filter>HAL\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\GUI\Picture\Picture.cpp">
+      <Filter>Kernel\GUI\Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\GUI\Picture\DirectDataPic.cpp">
+      <Filter>Kernel\GUI\Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\GUI\Picture\IndirectDataPic.cpp">
+      <Filter>Kernel\GUI\Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\GUI\Misc\RECT.cpp">
+      <Filter>Kernel\GUI\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel\GUI\Text\EstimateString.cpp">
+      <Filter>Kernel\GUI\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiInstDriver\LTC1446.c">
+      <Filter>MultiInstDriver\LTC1446</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\FFTTest.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\RFFTTest.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithm\WindowFunction\WindowFunctionDef.cpp">
+      <Filter>Algorithm\WindowFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithm\Transform\TwiddleTable.cpp">
+      <Filter>Algorithm\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithm\Transform\FFT\CFFT\CFFT_Radix2.cpp">
+      <Filter>Algorithm\Transform\FFT\CFFT</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithm\Transform\FFT\CFFT\CFFT_Radix2_MemCached.cpp">
+      <Filter>Algorithm\Transform\FFT\CFFT</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithm\Transform\FFT\RFFT\RFFT.cpp">
+      <Filter>Algorithm\Transform\FFT\RFFT</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithm\Transform\FFT\FFT.cpp">
+      <Filter>Algorithm\Transform\FFT</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithm\Transform\DFT\DFT.cpp">
+      <Filter>Algorithm\Transform\DFT</Filter>
+    </ClCompile>
+    <ClCompile Include="HAL\Tick.c">
+      <Filter>HAL\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="User\CurMeas.cpp">
+      <Filter>User\CurMeas</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiInstDriver\PGA11x.c">
+      <Filter>MultiInstDriver\PGA11x</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiInstDriver\DAC8311.c">
+      <Filter>MultiInstDriver\DAC8311</Filter>
+    </ClCompile>
+    <ClCompile Include="User\BoardIO.cpp">
+      <Filter>User\CurMeas</Filter>
+    </ClCompile>
+    <ClCompile Include="User\Process.cpp">
+      <Filter>User\CurMeas</Filter>
+    </ClCompile>
+    <ClCompile Include="User\AutoRange.cpp">
+      <Filter>User\CurMeas</Filter>
+    </ClCompile>
+    <ClCompile Include="User\Sample.cpp">
+      <Filter>User\CurMeas</Filter>
+    </ClCompile>
+    <ClCompile Include="User\Key.cpp">
+      <Filter>User\CurMeas</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\ADS1274.c">
+      <Filter>Driver\ADS1284</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HAL\Clock.h">
+      <Filter>HAL\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\Hardware.h">
+      <Filter>HAL\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\HCommon.h">
+      <Filter>HAL\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\PowerManagement.h">
+      <Filter>HAL\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\FT5336.h">
+      <Filter>Driver\FT5336</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\FT5336_Reg.h">
+      <Filter>Driver\FT5336</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\ILI9806G.h">
+      <Filter>Driver\IL9806G</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\TLV5617.h">
+      <Filter>Driver\TLV5617</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\Common\BugCheck.h">
+      <Filter>Kernel\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\Common\Init.h">
+      <Filter>Kernel\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\Common\KCommon.h">
+      <Filter>Kernel\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\DC\DC.h">
+      <Filter>Kernel\GUI\DC</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\DC\LCDDC.h">
+      <Filter>Kernel\GUI\DC</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\Text\DrawString.h">
+      <Filter>Kernel\GUI\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\Text\FontAddressing.h">
+      <Filter>Kernel\GUI\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\Text\FontGroup.h">
+      <Filter>Kernel\GUI\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\Text\FontProvider.h">
+      <Filter>Kernel\GUI\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\Power\Power.h">
+      <Filter>Kernel\Power</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonTypes.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\Common\KObject.h">
+      <Filter>Kernel\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\DC\BinderDC.h">
+      <Filter>Kernel\GUI\DC</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\DC\ClippedDC.h">
+      <Filter>Kernel\GUI\DC</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\GUICommon.h">
+      <Filter>Kernel\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\Shape\Line.h">
+      <Filter>Kernel\GUI\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\Shape\Circle.h">
+      <Filter>Kernel\GUI\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\Shape\Eclipse.h">
+      <Filter>Kernel\GUI\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\Tests.h">
+      <Filter>Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\MemMan\MemMan.h">
+      <Filter>Kernel\MemMan</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\MemMan\Pool.h">
+      <Filter>Kernel\MemMan</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\ASC16.h">
+      <Filter>Driver\IL9806G</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\LowLevelGraphic.h">
+      <Filter>Driver\IL9806G</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\UniSPI.h">
+      <Filter>HAL\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\SoftSPI.h">
+      <Filter>HAL\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\GPIO_32.h">
+      <Filter>HAL\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\UniGPIO.h">
+      <Filter>HAL\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\Picture\Picture.h">
+      <Filter>Kernel\GUI\Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\Picture\DirectDataPic.h">
+      <Filter>Kernel\GUI\Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\Picture\IndirectDataPic.h">
+      <Filter>Kernel\GUI\Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\Misc\RECT.h">
+      <Filter>Kernel\GUI\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel\GUI\Text\EstimateString.h">
+      <Filter>Kernel\GUI\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiInstDriver\LTC1446.h">
+      <Filter>MultiInstDriver\LTC1446</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\MemCached\MemCached.h">
+      <Filter>Algorithm\MemCached</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\WindowFunction\WindowFunction.h">
+      <Filter>Algorithm\WindowFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\AlgorithmTypes.h">
+      <Filter>Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\Transform\TwiddleTable.h">
+      <Filter>Algorithm\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\Transform\FFT\CFFT\CFFT_Radix2.h">
+      <Filter>Algorithm\Transform\FFT\CFFT</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\Transform\FFT\CFFT\CFFT_Radix2_MemCached.h">
+      <Filter>Algorithm\Transform\FFT\CFFT</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\Transform\FFT\RFFT\RFFT.h">
+      <Filter>Algorithm\Transform\FFT\RFFT</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\Transform\FFT\FFT.h">
+      <Filter>Algorithm\Transform\FFT</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\Transform\DFT\DFT.h">
+      <Filter>Algorithm\Transform\DFT</Filter>
+    </ClInclude>
+    <ClInclude Include="HAL\Tick.h">
+      <Filter>HAL\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiInstDriver\PGA11x.h">
+      <Filter>MultiInstDriver\PGA11x</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiInstDriver\DAC8311.h">
+      <Filter>MultiInstDriver\DAC8311</Filter>
+    </ClInclude>
+    <ClInclude Include="User\BoardIO.h">
+      <Filter>User\CurMeas</Filter>
+    </ClInclude>
+    <ClInclude Include="User\Process.h">
+      <Filter>User\CurMeas</Filter>
+    </ClInclude>
+    <ClInclude Include="User\CurMeas.h">
+      <Filter>User\CurMeas</Filter>
+    </ClInclude>
+    <ClInclude Include="User\Window.h">
+      <Filter>User\CurMeas</Filter>
+    </ClInclude>
+    <ClInclude Include="User\AutoRange.h">
+      <Filter>User\CurMeas</Filter>
+    </ClInclude>
+    <ClInclude Include="User\Sample.h">
+      <Filter>User\CurMeas</Filter>
+    </ClInclude>
+    <ClInclude Include="User\Key.h">
+      <Filter>User\CurMeas</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\ADS1274.h">
+      <Filter>Driver\ADS1284</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="msp432.props">
+      <Filter>Source files\Device-specific files</Filter>
+    </None>
+    <ClCompile Include="$(BSP_ROOT)\SystemInit\SystemInit.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\adc14.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\aes256.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\comp_e.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\cpu.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\crc32.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\cs.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\dma.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\flash.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\fpu.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\gpio.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\i2c.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\interrupt.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\mpu.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\pcm.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\pmap.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\pss.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\ref_a.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\reset.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\rtc_c.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\spi.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\sysctl.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\systick.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\timer32.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\timer_a.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\uart.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\SDK\driverlib\wdt_a.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\MSP432P4xx\StartupFiles\MSP432_startup_gcc.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\msp.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\msp432.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\msp432p401r.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\msp_compatibility.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\CMSIS\cmsis_ccs.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\CMSIS\core_cm4.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\CMSIS\core_cm4_simd.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\CMSIS\core_cmFunc.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\inc\CMSIS\core_cmInstr.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\adc14.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\aes256.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\comp_e.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\cpu.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\crc32.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\cs.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\debug.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\dma.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\driverlib.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\eusci.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\flash.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\fpu.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\gpio.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\i2c.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\interrupt.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\mpu.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\pcm.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\pmap.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\pss.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\ref_a.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\reset.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\rom.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\rom_map.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\rtc_c.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\spi.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\sysctl.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\systick.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\timer32.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\timer_a.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\uart.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\SDK\driverlib\wdt_a.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <None Include="SaltyOS-Debug.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="SaltyOS-Release.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="msp432.xml">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedBinaryFile Include="Resource\Pack.bin">
+      <Filter>Resource</Filter>
+    </EmbeddedBinaryFile>
+  </ItemGroup>
+</Project>
