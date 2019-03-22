@@ -8,3 +8,4 @@ trunk部分为stm32代码，功能比较多，所有做过的训练题等的代�
 架构考虑了触摸屏，但实际根本没有实现。<br>
 另外os这个名字是唬人的，最初想跑rtos，但没有去写。<br>
 branch有部分移植到MSP432的代码，功能为18年电子设计省赛的电流测量题<br>
+PCB： https://github.com/wtywtykk/SaltySTM32_Board
